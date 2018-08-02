@@ -19,10 +19,6 @@ THIS CODE IS PRODUCED BY : "SOUFIANE KHALLOUK".
 
 void playGame();
 void drawMap(int, char [][30]); // the integer determines the size of the map;
-void updatePlayerPos(int, int)
-{
-
-}
 
 int main()
 {
@@ -78,23 +74,23 @@ void playGame()
 		}
 	}
 	slot [15][0] = '.';
-/************************************/
-	struct entity;
+
+	struct entity
 	{
 		int xPos;
 		int yPos;
 		double health;
 		std::string name;
 	};
-/************************************/
+
 	entity player;
 	std::cout << "\t \tEnter character's name :" << '\n';
 	std::cin >> player.name;
-/************************************/
-  updatePlayerPos(player.xPos, player.yPos);
+
+  	
 
 	drawMap(30, slot);
-/************************************/
+
 }
 
 void drawMap(int mapLength, char slot[][30])
