@@ -16,9 +16,10 @@ THIS CODE IS PRODUCED BY : "SOUFIANE KHALLOUK".
 
 #include <iostream>
 #include <string>
+#include <array>
 
 void playGame();
-void drawMap(int, char [][30]); // the integer determines the size of the map;
+void drawMap(int, std::array<std::array<char, 30>, 30>); // the integer determines the size of the map;
 
 int main()
 {
@@ -64,7 +65,7 @@ int main()
 
 void playGame()
 {
-	char slot [30][30];
+	std::array <std::array<char, 30>, 30> slot;
 
 	for (int i = 0; i < 30 ; i++ )
 	{
@@ -86,14 +87,12 @@ void playGame()
 	entity player;
 	std::cout << "\t \tEnter character's name :" << '\n';
 	std::cin >> player.name;
-
-  	
-
+	
 	drawMap(30, slot);
 
 }
 
-void drawMap(int mapLength, char slot[][30])
+void drawMap(int mapLength, std::array<std::array<char, 30>, 30> slot)
 {
 	std::cout << '\n';
 	std::cout << "╔";
