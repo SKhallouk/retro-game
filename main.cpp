@@ -81,12 +81,9 @@ void playGame()
 		int xPos;
 		int yPos;
 		double health;
-		std::string name;
 	};
 
 	entity player;
-	std::cout << "\t \tEnter character's name :" << '\n';
-	std::cin >> player.name;
 	
 	drawMap(30, slot);
 
